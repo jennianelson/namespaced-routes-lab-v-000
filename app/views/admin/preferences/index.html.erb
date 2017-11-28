@@ -1,0 +1,28 @@
+<h1>Preferences</h1>
+<%= form_for ([:admin, @preference]) do |f| %>
+    <%= f.label :artist_sort_order, "Sort artists" %> <br>
+    <%= f.radio_button :artist_sort_order, "ASC" %>
+    <%= f.label :artist_sort_order_asc, "A-Z" %> <br>
+    <%= f.radio_button :artist_sort_order, "DESC" %>
+    <%= f.label :artist_sort_order_desc, "Z-A" %> <br> <br>
+
+    <%= f.label :song_sort_order, "Sort songs" %> <br>
+    <%= f.radio_button :song_sort_order, "ASC" %>
+    <%= f.label :song_sort_order_asc, "A-Z" %> <br>
+    <%= f.radio_button :song_sort_order, "DESC" %>
+    <%= f.label :song_sort_order_desc, "Z-A" %> <br> <br>
+
+    <%= f.label :allow_create_artists, "Allow users to create new artists?" %> <br>
+    <%= f.radio_button :allow_create_artists, true  %>
+    <%= f.label :allow_create_artists, "Yes", value: 'true' %> <br>
+    <%= f.radio_button :allow_create_artists, false  %>
+    <%= f.label :allow_create_artists, "No", value: 'false' %> <br> <br>
+
+    <%= f.label :allow_create_artists, "Allow users to create new songs?" %> <br>
+    <%= f.radio_button :allow_create_songs, true  %>
+    <%= f.label :allow_create_songs, "Yes", value: 'true' %> <br>
+    <%= f.radio_button :allow_create_songs, false  %>
+    <%= f.label :allow_create_artists, "No", value: 'false' %> <br> <br>
+
+    <%= f.submit %>
+<% end %>
